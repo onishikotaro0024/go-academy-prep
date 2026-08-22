@@ -20,7 +20,11 @@ func main() {
 	checkAge(30)
 	checkAge(18)
 
-	repeat()
+	repeatSum()
+
+	scopeTest()
+
+	printNames()
 }
 
 func name() {
@@ -50,7 +54,7 @@ func checkAge(age int) {
 	}
 }
 
-func repeat() {
+func repeatSum() {
 	total := 0
 
 	for i := 1; i <= 5; i++ {
@@ -59,4 +63,25 @@ func repeat() {
 	}
 
 	fmt.Println("合計:", total)
+}
+
+func scopeTest() {
+name := "Kotaro"
+total := 0
+
+for i := 1; i <= 3; i++ {
+	fmt.Println(i)
+	total += i
+	}
+fmt.Println(name)
+fmt.Println("合計:", total)
+	
+}
+
+func printNames() {
+	names := []string{"Kotaro", "ABC", "Taro"}
+
+	for i := 0; i < len(names); i++ {
+		fmt.Println(names[i])
+	}
 }
