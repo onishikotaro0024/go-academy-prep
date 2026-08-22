@@ -25,6 +25,10 @@ func main() {
 	scopeTest()
 
 	printNames()
+
+	printProfile()
+
+	printUser() 
 }
 
 func name() {
@@ -81,7 +85,54 @@ fmt.Println("合計:", total)
 func printNames() {
 	names := []string{"Kotaro", "ABC", "Taro"}
 
-	for i := 0; i < len(names); i++ {
-		fmt.Println(names[i])
+	// for i := 0; i < len(names); i++ {
+	// 	fmt.Println(names[i])
+	// }
+	
+names = append(names, "XYZ")
+	
+	for _, name := range names {
+	fmt.Println(name)
+}
+}
+
+func printProfile() {
+	profile := map[string]string{
+		"name": "Kotaro",
+		"job":  "Engineer",
 	}
+
+	profile["country"] = "Japan"
+	profile["job"] = "Designer"
+
+	fmt.Println("名前:", profile["name"])
+	fmt.Println("職業:", profile["job"])　// 「Designer」になる？
+	fmt.Println("国:", profile["country"])
+
+
+	email, ok := profile["email"]
+
+if ok {
+	fmt.Println(email)
+} else {
+	fmt.Println("emailは登録されていません")
+}
+}
+
+type User struct {
+	Name string
+	Age  int
+	Job  string
+}
+
+	func printUser() {
+	user := User{
+		Name: "Kotaro",
+		Age:  27,
+		Job:  "Designer",
+	}
+
+fmt.Println("名前:", user.Name)
+fmt.Println("年齢:", user.Age)
+fmt.Println("職業:", user.Job)
 }
