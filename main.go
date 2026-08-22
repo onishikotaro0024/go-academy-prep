@@ -106,7 +106,7 @@ func printProfile() {
 	profile["job"] = "Designer"
 
 	fmt.Println("名前:", profile["name"])
-	fmt.Println("職業:", profile["job"])　// 「Designer」になる？
+	fmt.Println("職業:", profile["job"]) // 「Designer」になる？
 	fmt.Println("国:", profile["country"])
 
 
