@@ -1,18 +1,18 @@
-package main
+// package main
 
-import "fmt"
+// import "fmt"
 
-func main() {
-	fmt.Println("Hello, Go!")
+// func main() {
+// 	fmt.Println("Hello, Go!")
 
-	user := User{
-		Name: "Kotaro",
-		Age:  27,
-		Job:  "Designer",
-	}
+// 	user := User{
+// 		Name: "Kotaro",
+// 		Age:  27,
+// 		Job:  "Designer",
+// 	}
 
-	user.Introduce()
+// 	user.Introduce()
 
-	result := add(10, 20)
-	fmt.Println(result)
-}
+// 	result := add(10, 20)
+// 	fmt.Println(result)
+// }
