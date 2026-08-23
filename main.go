@@ -17,9 +17,8 @@ import "fmt"
 // 	fmt.Println(result)
 // }
 
-
 func main() {
-fmt.Println("Hello, Go!")
+	fmt.Println("Hello, Go!")
 
 	name()
 
@@ -40,18 +39,18 @@ fmt.Println("Hello, Go!")
 
 	printProfile()
 
-	printUser() 
+	printUser()
 
 	user := User{
-	Name: "Kotaro",
-	Age:  27,
-	Job:  "Designer",
-}
+		Name: "Kotaro",
+		Age:  27,
+		Job:  "Designer",
+	}
 	user2 := User{
-	Name: "Yamada",
-	Age:  33,
-	Job:  "Engineer",
-}
+		Name: "Yamada",
+		Age:  33,
+		Job:  "Engineer",
+	}
 	user.Introduce()
 	user2.Introduce()
 
@@ -60,7 +59,6 @@ fmt.Println("Hello, Go!")
 
 	userName := user.GetName()
 	fmt.Println("取得した名前:", userName)
-
 
 	fmt.Println("変更前:", user.Job)
 	user.ChangeJob("Engineer")
@@ -75,27 +73,25 @@ fmt.Println("Hello, Go!")
 
 	result, err := divide(10, 2)
 
-
 	if err != nil {
-	fmt.Println("エラー: ", err)
-} else {
-	fmt.Println("結果: ", result)
-}
+		fmt.Println("エラー: ", err)
+	} else {
+		fmt.Println("結果: ", result)
+	}
 
 	result2, err2 := divide(10, 0)
 	if err2 != nil {
-	fmt.Println("エラー: ", err2)
-} else {
-	fmt.Println("結果: ", result2)
-}
-	
+		fmt.Println("エラー: ", err2)
+	} else {
+		fmt.Println("結果: ", result2)
+	}
 
 	err3 := checkNumber(-10)
 
 	if err3 != nil {
-	fmt.Println("エラー:", err3)
+		fmt.Println("エラー:", err3)
 	} else {
-	fmt.Println("正常です")
+		fmt.Println("正常です")
 	}
 
 }
