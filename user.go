@@ -120,3 +120,5 @@ func (u User) GetName() string {
 func (u *User) ChangeJob(newJob string) {
 	u.Job = newJob
 }
+
+
