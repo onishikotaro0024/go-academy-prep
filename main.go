@@ -97,3 +97,5 @@ fmt.Println("Hello, Go!")
 	} else {
 	fmt.Println("正常です")
 	}
+
+}
