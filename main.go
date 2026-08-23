@@ -52,11 +52,11 @@ func main() {
 	user.Introduce()
 	user2.Introduce()
 
-	job := user.GetJob()
-	fmt.Println("取得した職業:", job)
+	userJob := user.GetJob()
+	fmt.Println("取得した職業:", userJob)
 
-	name := user.GetName()
-	fmt.Println("取得した名前:", name)
+	userName := user.GetName()
+	fmt.Println("取得した名前:", userName)
 
 
 }
