@@ -6,6 +6,15 @@ import "fmt"
 
 // fmt パッケージ宣言
 
+///////////////////////////////////////////////////
+
+type User struct {
+	Name string
+	Age  int
+	Job  string
+}
+
+///////////////////////////////////////////////////
 func main() {
 	fmt.Println("Hello, Go!")
 
@@ -29,7 +38,30 @@ func main() {
 	printProfile()
 
 	printUser() 
+
+	user := User{
+	Name: "Kotaro",
+	Age:  27,
+	Job:  "Designer",
 }
+	user2 := User{
+	Name: "Yamada",
+	Age:  33,
+	Job:  "Engineer",
+}
+	user.Introduce()
+	user2.Introduce()
+
+	job := user.GetJob()
+	fmt.Println("取得した職業:", job)
+
+	job := user.GetName()
+	fmt.Println("取得した職業:", job)
+
+
+}
+///////////////////////////////////////////////////////////////////////////
+
 
 func name() {
 	name := "Kotaro"
@@ -119,11 +151,7 @@ if ok {
 }
 }
 
-type User struct {
-	Name string
-	Age  int
-	Job  string
-}
+
 
 	func printUser() {
 	user := User{
@@ -135,4 +163,19 @@ type User struct {
 fmt.Println("名前:", user.Name)
 fmt.Println("年齢:", user.Age)
 fmt.Println("職業:", user.Job)
+}
+
+
+func (u User) Introduce() {
+	fmt.Println("こんにちは、", u.Name, "です")
+	fmt.Println("職業は:", u.Job, "です")
+}
+
+
+func (u User) GetJob() string {
+	return u.Job
+}
+
+func (u User) GetName() string {
+	return u.Name
 }
