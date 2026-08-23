@@ -55,8 +55,8 @@ func main() {
 	job := user.GetJob()
 	fmt.Println("取得した職業:", job)
 
-	job := user.GetName()
-	fmt.Println("取得した職業:", job)
+	name := user.GetName()
+	fmt.Println("取得した名前:", name)
 
 
 }
