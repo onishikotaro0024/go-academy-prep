@@ -78,9 +78,6 @@ func main() {
 	//pointer.Job = "Director" → 速い・単純
 	fmt.Println(user.Job)
 
-
-
-
 	result, err := divide(10, 2)
 
 
@@ -97,6 +94,16 @@ func main() {
 	fmt.Println("結果: ", result2)
 }
 	
+
+	err3 := checkNumber(-10)
+
+	if err3 != nil {
+	fmt.Println("エラー:", err3)
+	} else {
+	fmt.Println("正常です")
+	}
+
+///////////////////////////////////////////////////////////////////////////
 }
 ///////////////////////////////////////////////////////////////////////////
 
@@ -223,9 +230,17 @@ func (u *User) ChangeJob(newJob string) {
 }
 
 func divide(a int, b int) (int, error) {
-
-			if b == 0 {
-		return 0, fmt.Errorf("0では割れません")
+		if b == 0 {
+			return 0, fmt.Errorf("0では割れません")
 	}
-		return a / b, nil
+			return a / b, nil
+}
+
+
+
+func checkNumber(n int) error{
+		if n < 0 {
+			return fmt.Errorf("マイナスの値です")
+	}
+			return nil
 }
