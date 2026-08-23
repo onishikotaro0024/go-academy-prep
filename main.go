@@ -1,11 +1,19 @@
-package main
+package main // パッケージ宣言
 
-// パッケージ宣言
-
-import "fmt"
-
-// fmt パッケージ宣言
-
+import "fmt" // fmt パッケージ読み込み
+// fmt.Println("Hello") → 改行付きで表示
+// fmt.Print("Hello") → 改行なしで表示
+// fmt.Printf("名前: %s 年齢: %d\n", name, age) → 書式を指定して表示
+//
+// %s = string
+// %d = int
+// %f = float
+// %v = 値を自動的に表示
+// \n = 改行
+//
+// fmt.Sprintf("名前: %s", name) → 表示せず、整形したstringを返す
+// fmt.Errorf("エラー: %s", message) → error型の値を作る
+// fmt.Scan(&name) → 標準入力から値を受け取る
 ///////////////////////////////////////////////////
 
 type User struct {
