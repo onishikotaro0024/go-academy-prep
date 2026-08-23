@@ -59,6 +59,17 @@ func main() {
 	fmt.Println("取得した名前:", userName)
 
 
+	fmt.Println("変更前:", user.Job)
+	user.ChangeJob("Engineer")
+	fmt.Println("変更後:", user.Job)
+
+	pointer := &user
+	fmt.Println(pointer.Name)
+	fmt.Println(pointer.Job)
+	user.ChangeJob("Director") //→ 少し遠回りだが、変更ルールをまとめられる
+	//pointer.Job = "Director" → 速い・単純
+	fmt.Println(user.Job)
+
 }
 ///////////////////////////////////////////////////////////////////////////
 
@@ -178,4 +189,8 @@ func (u User) GetJob() string {
 
 func (u User) GetName() string {
 	return u.Name
+}
+
+func (u *User) ChangeJob(newJob string) {
+	u.Job = newJob
 }
