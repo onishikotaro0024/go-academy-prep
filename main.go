@@ -1,6 +1,6 @@
-// package main
+package main
 
-// import "fmt"
+import "fmt"
 
 // func main() {
 // 	fmt.Println("Hello, Go!")
@@ -16,14 +16,6 @@
 // 	result := add(10, 20)
 // 	fmt.Println(result)
 // }
-
-
-type User struct {
-	Name string
-	Age  int
-	Job  string
-}
-/////////////////////////////
 
 
 func main() {
