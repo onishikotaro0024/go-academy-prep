@@ -70,6 +70,25 @@ func main() {
 	//pointer.Job = "Director" → 速い・単純
 	fmt.Println(user.Job)
 
+
+
+
+	result, err := divide(10, 2)
+
+
+	if err != nil {
+	fmt.Println("エラー: ", err)
+} else {
+	fmt.Println("結果: ", result)
+}
+
+	result2, err2 := divide(10, 0)
+	if err2 != nil {
+	fmt.Println("エラー: ", err2)
+} else {
+	fmt.Println("結果: ", result2)
+}
+	
 }
 ///////////////////////////////////////////////////////////////////////////
 
@@ -193,4 +212,12 @@ func (u User) GetName() string {
 
 func (u *User) ChangeJob(newJob string) {
 	u.Job = newJob
+}
+
+func divide(a int, b int) (int, error) {
+
+			if b == 0 {
+		return 0, fmt.Errorf("0では割れません")
+	}
+		return a / b, nil
 }
