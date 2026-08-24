@@ -31,8 +31,17 @@ func main() {
 	greet("Kotaro")
 	greet("ABC")
 
-	result := calc.Add(10, 20)
-	fmt.Println(result)
+	resultAdd := calc.Add(10, 20)
+	fmt.Println(resultAdd)
+
+
+	resultDivide, err := calc.Divide(10, 2)
+
+	if err != nil {
+		fmt.Println("エラー: ", err)
+	} else {
+		fmt.Println("結果: ", resultDivide)
+	}
 	
 
 	// checkAge(30)
@@ -78,13 +87,6 @@ func main() {
 	//pointer.Job = "Director" → 速い・単純
 	fmt.Println(user.Job)
 
-	// result, err := divide(10, 2)
-
-	// if err != nil {
-	// 	fmt.Println("エラー: ", err)
-	// } else {
-	// 	fmt.Println("結果: ", result)
-	// }
 
 	// result2, err2 := divide(10, 0)
 	// if err2 != nil {
