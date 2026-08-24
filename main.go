@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/onishikotaro0024/go-academy-prep/calc"
+)
 
 // func main() {
 // 	fmt.Println("Hello, Go!")
@@ -17,6 +21,8 @@ import "fmt"
 // 	fmt.Println(result)
 // }
 
+
+
 func main() {
 	fmt.Println("Hello, Go!")
 
@@ -25,11 +31,12 @@ func main() {
 	greet("Kotaro")
 	greet("ABC")
 
-	result := add(10, 20)
+	result := calc.Add(10, 20)
 	fmt.Println(result)
+	
 
-	checkAge(30)
-	checkAge(18)
+	// checkAge(30)
+	// checkAge(18)
 
 	repeatSum()
 
@@ -71,27 +78,27 @@ func main() {
 	//pointer.Job = "Director" → 速い・単純
 	fmt.Println(user.Job)
 
-	result, err := divide(10, 2)
+	// result, err := divide(10, 2)
 
-	if err != nil {
-		fmt.Println("エラー: ", err)
-	} else {
-		fmt.Println("結果: ", result)
-	}
+	// if err != nil {
+	// 	fmt.Println("エラー: ", err)
+	// } else {
+	// 	fmt.Println("結果: ", result)
+	// }
 
-	result2, err2 := divide(10, 0)
-	if err2 != nil {
-		fmt.Println("エラー: ", err2)
-	} else {
-		fmt.Println("結果: ", result2)
-	}
+	// result2, err2 := divide(10, 0)
+	// if err2 != nil {
+	// 	fmt.Println("エラー: ", err2)
+	// } else {
+	// 	fmt.Println("結果: ", result2)
+	// }
 
-	err3 := checkNumber(-10)
+	// err3 := checkNumber(-10)
 
-	if err3 != nil {
-		fmt.Println("エラー:", err3)
-	} else {
-		fmt.Println("正常です")
-	}
+	// if err3 != nil {
+	// 	fmt.Println("エラー:", err3)
+	// } else {
+	// 	fmt.Println("正常です")
+	// }
 
 }
